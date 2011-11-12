@@ -1,699 +1,749 @@
-/* _________________________________________________
+/* @group 320 And Up */
 
-320 and Up boilerplate extension
-Andy Clarke http://about.me/malarkey
-Keith Clark 
-Version: 2
-URL: http://stuffandnonsense.co.uk/projects/320andup/
-License: http://creativecommons.org/licenses/MIT/
-_____________________________________________________
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+	display: block;
+}
 
-1 ROOT
-2 HEADINGS
-3 TYPOGRAPHY
-4 LINKS
-5 FIGURES & IMAGES
-6 TABLES
-7 FORMS
-8 BANNER
-9 NAVIGATION
-10 CONTENT
-11 MAIN
-12 COMPLEMENTARY
-13 CONTENTINFO
-14 GLOBAL OBJECTS
-15 VENDOR-SPECIFIC 
-16 MODERNIZR
-17 TEMPLATE SPECIFICS
-18 MEDIA QUERIES
-
-COLOURS 
-
-*/
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { 
-display : block; }
-
-audio[controls], canvas, video { 
-display : inline-block; 
-*display : inline; 
-*zoom : 1; }
-
-/* 1. ROOT ============================================================================= */
+audio[controls],canvas,video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
 
 html {
-overflow-y : scroll;
-background : rgb(255,255,255); 
-background : rgb(255,255,255) url(../img/tmp/grid.png) repeat-y 50% 0; }
+	-ms-overflow-y: scroll;
+	overflow-y: scroll;
+	background: rgb(255,255,255);
+}
 
-body { 
-margin : 0 auto;
-padding : 0;
-width : 90% /* 252px */;
-font : 100%/1.4 Cambria, Georgia, Times, "Times New Roman";
-color : rgb(40,40,40); 
-background-color : transparent; }
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 90%;
+	font: 100%/1.4 'Helvetica Neue',Arial,sans-serif;
+	color: rgb(40,40,40);
+	background-color: transparent;
+}
 
-button, 
-input, 
-select, 
-textarea { 
-font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; 
-color : rgb(40,40,40); }
+button,input,select,textarea {
+	font-family: 'Helvetica Neue',Arial,sans-serif;
+	color: rgb(40,40,40);
+}
 
-/* 2. HEADINGS (320 and Up typography defaults) ==================================================== */
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Helvetica Neue',Arial,sans-serif;
+	font-weight: bold;
+	margin: 0;
+}
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1 {
+	font-size: 3em; /* 48 / 16 = 3 */
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 2em; /* 36 / 16 = 2 */
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.5em; /* 24 / 16 = 1.5 */
+	line-height: 1.3;
+}
+
+h4 {
+	font-size: 1.25em; /* 20 / 16 = 1.25 */
+	line-height: 1.25;
+}
+
+h5 {
+	font-size: 1em; /* 16 / 16 = 1 */
+}
+
 h6 {
-font-family : "Helvetica Neue", Helvetica, Arial;
-font-weight : bold; }
+	font-size: 1em; /* 16 / 16 = 1 */
+}
 
-h1 { 
-margin-bottom : .75em;
-font-size : 3em; /* 48 / 16 = 3 */
-line-height : 1.2; }
-
-h2 { 
-margin-bottom : .75em;
-font-size : 2em; /* 36 / 16 = 2 */
-line-height : 1.2; }
-
-h3 { 
-margin-bottom : 1em;
-font-size : 1.5em; /* 24 / 16 = 1.5 */
-line-height : 1.3; }
-
-h4 { 
-margin-bottom : 1.25em;
-font-size : 1.25em; /* 20 / 16 = 1.25 */
-line-height : 1.25; }
-
-h5 { 
-margin-bottom : 1.5em;
-font-size : 1em; /* 16 / 16 = 1 */ }
-
-h6 { 
-font-size : 1em; /* 16 / 16 = 1 */ }
-
-/* 3. TYPOGRAPHY (320 and Up typography defaults) ============================================================================= */
-
-p, 
-ol, 
-ul, 
-dl, 
-address { 
-margin-bottom : 1.5em; 
-font-size : 1em; /* 16 / 16 = 1 */ }
+p,ol,ul,dl,address {
+	margin-bottom: 1.5em;
+	font-size: 1em; /* 16 / 16 = 1 */
+}
 
 p {
-hyphens : auto; 
-text-align : justify; }
+	hyphens: auto;
+	text-align: justify;
+}
 
-ul, 
-ol { 
-margin : 0 0 1.5em -24px; 
-padding : 0 0 0 24px; }
+ul,ol {
+	margin: 0;
+	padding: 0;
+}
 
-li ul, 
-li ol { 
-margin : 0;
-font-size : 1em; /* 16 / 16 = 1 */ }
+li ul,li ol {
+	margin: 0;
+	font-size: 1em; /* 16 / 16 = 1 */
+}
 
-dl, 
-dd { 
-margin-bottom : 1.5em; }
+dl,dd {
+	margin-bottom: 1.5em;
+}
 
-dt { 
-font-weight : normal; }
+dt {
+	font-weight: normal;
+}
 
-blockquote  { 
-margin : 0 0 1.5em -24px; 
-padding-left : 24px; 
-border-left : 1px solid rgb(200,200,200);
-font-style : italic; }
+blockquote {
+	margin: 0;
+	border-left: 1px solid rgb(200,200,200);
+	font-style: italic;
+}
 
-blockquote:before, 
-blockquote:after, 
-q:before, 
-q:after {
-content : '';
-content : none; }
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
 
-abbr[title] { 
-border-bottom : 1px dotted; 
-cursor : help; }
+abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
 
-b, strong { 
-font-weight : bold; }
+b,strong {
+	font-weight: bold;
+}
 
-dfn { 
-font-style : italic; }
+dfn {
+	font-style: italic;
+}
 
-hr { 
-display : block; 
-margin : 1em 0; 
-padding : 0;
-height : 1px; 
-border : 0; 
-border-top : 1px solid rgb(204,204,204); }
+hr {
+	display: block;
+	margin: 1em 0;
+	padding: 0;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid rgb(204,204,204);
+}
 
-ins { 
-background-color : rgb(240,240,240); 
-color : rgb(0,0,0); 
-text-decoration : none; }
+ins {
+	background-color: rgb(240,240,240);
+	color: rgb(0,0,0);
+	text-decoration: none;
+}
 
-mark { 
-background-color : rgb(240,240,240); 
-color: rgb(0,0,0); 
-font-style : italic; 
-font-weight : bold; }
+mark {
+	background-color: rgb(240,240,240);
+	color: rgb(0,0,0);
+	font-style: italic;
+	font-weight: bold;
+}
 
-pre, 
-code, 
-kbd, 
-samp { 
-font-family : monospace, monospace; 
-_font-family : 'courier new', monospace; 
-font-size : .875em; 
-line-height : 1.5; }
+pre,code,kbd,samp {
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;
+	font-size: .875em;
+	line-height: 1.5;
+}
 
-pre { 
-white-space : pre; 
-white-space : pre-wrap; 
-word-wrap : break-word; }
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
 
-q { 
-quotes : none; }
+q {
+	quotes: none;
+}
 
-q:before, 
-q:after { 
-content : ""; 
-content : none; }
+q:before,q:after {
+	content: "";
+	content: none;
+}
 
-small { 
-font-size : 1em; /* 16 / 16 = 1 */ }
+small {
+	font-size: 1em; /* 16 / 16 = 1 */
+}
 
-sub, sup { 
-font-size : 75%; 
-line-height : 0; 
-position : relative; 
-vertical-align : baseline; }
+sub,sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
 
-sup { 
-top : -.5em; }
+sup {
+	top: -.5em;
+}
 
-sub { 
-bottom : -.25em; }
+sub {
+	bottom: -.25em;
+}
 
-/* 4.LINKS ============================================================================= */
+a {
+	color: rgb(23,119,175);
+}
 
-a { 
-color : rgb(23,119,175); }
+a:visited {
+	color: rgb(40,40,40);
+}
 
-a:visited { 
-color : rgb(40,40,40); }
+a:focus {
+	outline: thin dotted;
+	color: rgb(0,0,0);
+}
 
-a:focus { 
-outline : thin dotted; 
-color : rgb(0,0,0); }
-
-a:hover, 
-a:active { 
-outline : 0; }
-
-/* 5.FIGURES & IMAGES ============================================================================= */
+a:hover,a:active {
+	outline: 0;
+}
 
 figure {
-margin-bottom : 1.5em; }
+	margin-bottom: 1.5em;
+}
 
-figure img,
-figure object,
-figure embed {
-margin-bottom : .75em;
-max-width : 100%; }
+figure img,figure object,figure embed {
+	margin-bottom: .75em;
+	max-width: 100%;
+}
 
 figcaption {
-display : block;
-font-weight : normal; }
+	display: block;
+	font-weight: normal;
+}
 
 img {
-border : 0; }
+	border: 0;
+}
 
 svg:not(:root) {
-overflow : hidden; }
+	overflow: hidden;
+}
 
-/* 6.TABLES ============================================================================= */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.4em;
+	width: 100%;
+	font-size: .875em; /* 14 / 16 = .875 */
+}
 
-table { 
-border-collapse : collapse;
-border-spacing : 0;
-margin-bottom : 1.4em; 
-width : 100%;
-font-size : .875em; /* 14 / 16 = .875 */ }
+th,td,caption {
+	padding: .25em 10px .25em 5px;
+}
 
-th, td, caption { 
-padding : .25em 10px .25em 5px; }
+tfoot {
+	font-style: italic;
+}
 
-tfoot { 
-font-style : italic; }
+caption {
+	background-color: transparent;
+}
 
-caption { 
-background-color : transparent; }
+form {
+	margin: 0;
+}
 
-/* 7.FORMS ============================================================================= */
+fieldset {
+	margin-bottom: 1.5em;
+	padding: 0;
+	border-width: 0;
+}
 
-form { 
-margin : 0; }
+legend {
+	*margin-left: -7px;
+	padding: 0;
+	border-width: 0;
+}
 
-fieldset { 
-margin-bottom : 1.5em; 
-padding : 0; 
-border-width : 0; }
+label {
+	font-weight: normal;
+	cursor: pointer;
+}
 
-legend { 
-*margin-left : -7px; 
-padding : 0; 
-border-width : 0; }
+button,input,select,textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
 
-label { 
-font-weight : normal;
-cursor : pointer; }
+button,input {
+	line-height: normal;
+	*overflow: visible;
+}
 
-button, 
-input, 
-select, 
-textarea { 
-font-size : 100%; 
-margin : 0; 
-vertical-align : baseline; 
-*vertical-align : middle; }
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+	cursor: pointer;
+}
 
-button, input { 
-line-height : normal; 
-*overflow : visible; }
+input[type="checkbox"],input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-button, 
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] { 
-cursor : pointer; }
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 
-input[type="checkbox"], 
-input[type="radio"] { 
-box-sizing : border-box; }
+button::-moz-focus-inner,input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
 
-input[type="search"] { 
-box-sizing : content-box; }
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
 
-button::-moz-focus-inner, 
-input::-moz-focus-inner { 
-padding : 0;
-border : 0;  }
+/* @group Colors for form validity */
 
-textarea { 
-overflow : auto; 
-vertical-align : top; }
+input:valid,textarea:valid {
+	/* Styles */
+}
 
-/* Colors for form validity */
-input:valid, 
-textarea:valid   {  
-/* Styles */ }
+input:invalid,textarea:invalid {
+	-webkit-box-shadow: 0 0 2px rgb(255,0,0);
+	-moz-box-shadow: 0 0 2px rgb(255,0,0);
+	box-shadow: 0 0 2px rgb(255,0,0);
+}
 
-input:invalid, 
-textarea:invalid {
--webkit-box-shadow : 0 0 2px rgb(255,0,0); 
--moz-box-shadow : 0 0 2px rgb(255,0,0);
-box-shadow : 0 0 2px rgb(255,0,0); }
+.no-boxshadow input:invalid,.no-boxshadow textarea:invalid {
+	background-color: rgb(240,221,221);
+}
 
-.no-boxshadow input:invalid, 
-.no-boxshadow textarea:invalid {
-background-color : rgb(240,221,221); }
+/* @end */
 
-/* 8 BANNER 		============================================================================= */
-/* 9 NAVIGATION 	============================================================================= */
-/* 10 CONTENT 		============================================================================= */
-/* 11 MAIN 			============================================================================= */
-/* 12 COMPLEMENTARY ============================================================================= */
-/* 13 CONTENTINFO 	============================================================================= */
+/* @group Clearfix */
 
-/* 14 GLOBAL OBJECTS ============================================================================= */
+.clearfix:before,.clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
 
-.clearfix:before, 
-.clearfix:after { 
-content : "\0020"; 
-display : block; 
-height : 0; 
-overflow : hidden; }
+.clearfix:after {
+	clear: both;
+}
 
-.clearfix:after { 
-clear : both; }
+/* @end */
 
-/* 15 VENDOR-SPECIFIC ============================================================================= */
+/* @group Vendor-Specific */
 
-html { 
--webkit-overflow-scrolling : touch; 
--webkit-tap-highlight-color : rgb(52,158,219); 
--webkit-text-size-adjust : 100%; 
--ms-text-size-adjust : 100%; }
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: rgb(52,158,219);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 
-.clearfix { 
-zoom : 1; }
+.clearfix {
+	zoom: 1;
+}
 
-::-webkit-selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
-text-shadow : none; }
+::-webkit-selection {
+	background: rgb(23,119,175);
+	color: rgb(250,250,250);
+	text-shadow: none;
+}
 
-::-moz-selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
-text-shadow : none; }
+::-moz-selection {
+	background: rgb(23,119,175);
+	color: rgb(250,250,250);
+	text-shadow: none;
+}
 
-::selection { 
-background : rgb(23,119,175); 
-color : rgb(250,250,250); 
-text-shadow : none; }
+::selection {
+	background: rgb(23,119,175);
+	color: rgb(250,250,250);
+	text-shadow: none;
+}
 
-button, 
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] { 
--webkit-appearance : button; }
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+	-webkit-appearance: button;
+}
 
 ::-webkit-input-placeholder {
-font-size : .875em; 
-line-height : 1.4; }
+	font-size: .875em;
+	line-height: 1.4;
+}
 
-input:-moz-placeholder { 
-font-size : .875em; 
-line-height : 1.4; }
+input:-moz-placeholder {
+	font-size: .875em;
+	line-height: 1.4;
+}
 
-.ie7 img,
-.iem7 img { 
--ms-interpolation-mode : bicubic; }
+.ie7 img,.iem7 img {
+	-ms-interpolation-mode: bicubic;
+}
 
-input[type="checkbox"], 
-input[type="radio"] { 
-box-sizing : border-box; }
+input[type="checkbox"],input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
-input[type="search"] { 
--webkit-box-sizing : content-box;
--moz-box-sizing : content-box; }
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 
-button::-moz-focus-inner, 
-input::-moz-focus-inner { 
-padding : 0;
-border : 0; }
+button::-moz-focus-inner,input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
 
 p {
-/* http://www.w3.org/TR/css3-text/#hyphenation */
--webkit-hyphens : auto;
--webkit-hyphenate-character : "\2010";
--webkit-hyphenate-limit-after : 1;
--webkit-hyphenate-limit-before : 3;
--moz-hyphens : auto; }
+	/* http://www.w3.org/TR/css3-text/#hyphenation */
+	-webkit-hyphens: auto;
+	-webkit-hyphenate-character: "\2010";
+	-webkit-hyphenate-limit-after: 1;
+	-webkit-hyphenate-limit-before: 3;
+	-moz-hyphens: auto;
+}
 
-/* Non-semantic helper classes 
+/* @end */
 
-.ir { display : block; 
-overflow : hidden; 
-background-repeat : no-repeat; 
-text-align : left; 
-text-indent : -999em; 
-direction : ltr; }
+/* @group Non-semantic helper classes */
 
-.ir br { 
-display : none; }
+.ir {
+	display: block;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	text-indent: -999em;
+	direction: ltr;
+}
 
-.hidden { 
-display : none; 
-visibility: hidden; }
+.ir br {
+	display: none;
+}
 
-.visuallyhidden { 
-position : absolute;
-margin : -1px;
-padding : 0;
-height  : 1px;
-width : 1px;
-overflow : hidden;
-border : 0; 
-clip : rect(0 0 0 0); }
+.hidden {
+	display: none;
+	visibility: hidden;
+}
 
-.visuallyhidden.focusable:active, 
-.visuallyhidden.focusable:focus { 
-position: static;
-margin : 0; 
-height : auto; 
-width : auto;
-overflow: visible; 
-clip : auto; }
+.visuallyhidden {
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
 
-.invisible { 
-visibility : hidden; } */
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+	position: static;
+	margin: 0;
+	height: auto;
+	width: auto;
+	overflow: visible;
+	clip: auto;
+}
 
-/* 16 MODERNIZR ============================================================================= */
+.invisible {
+	visibility: hidden;
+}
 
-/* audio */
-/* applicationcache */
-/* backgroundsize */
-/* borderimage */
-/* borderradius */
-/* boxshadow */
-/* canvas */
-/* canvastext */
-/* cssanimations */
-/* csscolumns */
-/* cssgradients */
-/* cssreflections*/
-/* csstransforms */
-/* csstransforms3d */
-/* csstransitions */
-/* draganddrop */
-/* flexbox */
-/* fontface */
-/* geolocation */
-/* hashchange */
-/* history */
-/* hsla */
-/* indexeddb */
-/* inlinesvg */
-/* localstorage */
-/* multiplebgs */
-/* opacity */
-/* postmessage */
-/* rgba */
-/* sessionstorage */
-/* smil */
-/* svg */
-/* svgclippaths */
-/* textshadow */
-/* touch */
-/* video */
-/* webgl */
-/* websqldatabase */
-/* websockets */
-/* webworkers */
+/* @end */
 
-/* 17 TEMPLATE SPECIFICS ============================================================================= */
 
-/* 18 MEDIA QUERIES ============================================================================= */
+/* @end */
+
+#logo {
+	
+}
+
+/* @group Media-queries */
 
 @media print {
+	* {
+	background: transparent !important;
+	color: black !important;
+	text-shadow: none !important;
+	filter: none !important;
+	-ms-filter: none !important;
+}
 
-/* 1 ROOT ============================================================================= */
+@page {
+	margin: 0.5cm;
+}
 
-* { 
-background : transparent !important; 
-color : black !important; 
-text-shadow : none !important; 
-filter : none !important; 
--ms-filter : none !important; }
+h2,h3 {
+	orphans: 3;
+	widows: 3;
+	page-break-after: avoid;
+}
 
-@page { 
-margin : 0.5cm; }
+p {
+	orphans: 3;
+	widows: 3;
+}
 
-/* 2 HEADINGS ============================================================================= */
+pre,blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
 
-h2, h3 { 
-orphans : 3; 
-widows : 3; 
-page-break-after : avoid; }
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
 
-/* 3 TYPOGRAPHY ============================================================================= */
+a,a:visited {
+	color: #444 !important;
+	text-decoration: underline;
+}
 
-p { 
-orphans : 3; 
-widows : 3; }
+a[href]:after {
+	content: " (" attr(href) ")";
+}
 
-pre, blockquote { 
-border : 1px solid #999; 
-page-break-inside : avoid; }
+a[href^="javascript:"]:after,a[href^="#"]:after {
+	content: "";
+}
 
-abbr[title]:after { 
-content : " (" attr(title) ")"; }
+img {
+	max-width: 100% !important;
+	page-break-inside: avoid;
+}
 
-/* 4 LINKS ============================================================================= */
+thead {
+	display: table-header-group;
+}
 
-a, a:visited { 
-color : #444 !important; 
-text-decoration : underline; }
+tr {
+	page-break-inside: avoid;
+}
 
-a[href]:after { 
-content : " (" attr(href) ")"; }
-
-a[href^="javascript:"]:after, 
-a[href^="#"]:after { 
-content : ""; } 
-
-/* 5 FIGURES & IMAGES ============================================================================= */
-
-img { 
-max-width : 100% !important;
-page-break-inside : avoid; }
-
-/* 6 TABLES ============================================================================= */
-
-thead { 
-display : table-header-group; } 
-
-tr { 
-page-break-inside : avoid; }
-
-/* 7 FORMS ============================================================================= */
-/* 8 BANNER ============================================================================= */
-/* 9 NAVIGATION ============================================================================= */
-/* 10 CONTENT ============================================================================= */
-/* 11 MAIN ============================================================================= */
-/* 12 COMPLEMENTARY ============================================================================= */
-/* 13 CONTENTINFO ============================================================================= */
-/* 14 GLOBAL OBJECTS ============================================================================= */
-
-.ir a:after { 
-content : ""; } 
-
-/* 15 VENDOR-SPECIFIC ============================================================================= */
-/* 16 MODERNIZR ============================================================================= */
-/* 17 TEMPLATE SPECIFICS ============================================================================= */
+.ir a:after {
+	content: "";
+}
 
 }
+
 
 /* 480px */
 @media only screen and (min-width: 480px) {
 
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
 
 }
 
 /* 600px */
 @media only screen and (min-width: 600px) {
 
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
 
 }
 
 /* 768px */
 @media only screen and (min-width: 768px) {
-
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
-
+	/* @group SimpleGrid */
+	
+	/* Containers */
+	body {
+		font-size: 0.875em;
+		padding: 0;
+	}
+	
+	.grid {
+		margin: 0 auto;
+		padding: 0 10px;
+		width: 700px;
+	}
+	
+	.row {
+		clear: left;
+	}
+	
+	/* Slots Setup */
+	.slot-0,.slot-1,.slot-2,.slot-3,.slot-4,.slot-5,.slot-0-1,.slot-0-1-2,.slot-0-1-2-3,.slot-0-1-2-3-4,.slot-0-1-2-3-4-5,.slot-1-2,.slot-1-2-3,.slot-1-2-3-4,.slot-1-2-3-4-5,.slot-2-3,.slot-2-3-4,.slot-2-3-4-5,.slot-3-4,.slot-3-4-5,.slot-4-5,.slot-6,.slot-7,.slot-8,.slot-9,.slot-6-7,.slot-6-7-8,.slot-6-7-8-9,.slot-7-8,.slot-7-8-9,.slot-8-9 {
+		display: inline;
+		float: left;
+		margin-left: 20px;
+	}
+	
+	/* 6-Col Grid Sizes */
+	.slot-0,.slot-1,.slot-2,.slot-3,.slot-4,.slot-5 {
+		width: 100px;
+	}
+	
+	/* Sixths */
+	.slot-0-1,.slot-1-2,.slot-2-3,.slot-3-4,.slot-4-5 {
+		width: 220px;
+	}
+	
+	/* Thirds */
+	.slot-0-1-2-3,.slot-1-2-3-4,.slot-2-3-4-5 {
+		width: 460px;
+	}
+	
+	/* Two-Thirds */
+	.slot-0-1-2-3-4,.slot-1-2-3-4-5 {
+		width: 580px;
+	}
+	
+	/* Five-Sixths */
+	/* 4-Col Grid Sizes */
+	.slot-6,.slot-7,.slot-8,.slot-9 {
+		width: 160px;
+	}
+	
+	/* Quarters */
+	.slot-6-7-8,.slot-7-8-9 {
+		width: 520px;
+	}
+	
+	/* Three-Quarters */
+	/* 6-Col/4-Col Shared Grid Sizes */
+	.slot-0-1-2,.slot-1-2-3,.slot-2-3-4,.slot-3-4-5,.slot-6-7,.slot-7-8,.slot-8-9 {
+		width: 340px;
+	}
+	
+	/* Halves */
+	.slot-0-1-2-3-4-5,.slot-6-7-8-9 {
+		width: 100%;
+	}
+	
+	/* Full-Width */
+	/* Zeroing Out Leftmost Slot Margins */
+	.slot-0,.slot-0-1,.slot-0-1-2,.slot-0-1-2-3,.slot-0-1-2-3-4,.slot-0-1-2-3-4-5,.slot-6,.slot-6-7,.slot-6-7-8,.slot-6-7-8-9,.slot-1 .slot-1,.slot-1-2 .slot-1,.slot-1-2 .slot-1-2,.slot-1-2-3 .slot-1,.slot-1-2-3 .slot-1-2,.slot-1-2-3 .slot-1-2-3,.slot-1-2-3-4 .slot-1,.slot-1-2-3-4 .slot-1-2,.slot-1-2-3-4 .slot-1-2-3,.slot-1-2-3-4 .slot-1-2-3-4,.slot-1-2-3-4-5 .slot-1,.slot-1-2-3-4-5 .slot-1-2,.slot-1-2-3-4-5 .slot-1-2-3,.slot-1-2-3-4-5 .slot-1-2-3-4,.slot-1-2-3-4-5 .slot-1-2-3-4-5,.slot-2 .slot-2,.slot-2-3 .slot-2,.slot-2-3 .slot-2-3,.slot-2-3-4 .slot-2,.slot-2-3-4 .slot-2-3,.slot-2-3-4 .slot-2-3-4,.slot-2-3-4-5 .slot-2,.slot-2-3-4-5 .slot-2-3,.slot-2-3-4-5 .slot-2-3-4,.slot-2-3-4-5 .slot-2-3-4-5,.slot-3 .slot-3,.slot-3-4 .slot-3,.slot-3-4 .slot-3-4,.slot-3-4-5 .slot-3,.slot-3-4-5 .slot-3-4,.slot-3-4-5 .slot-3-4-5,.slot-4 .slot-4,.slot-4-5 .slot-4,.slot-4-5 .slot-4-5,.slot-5 .slot-5,.slot-7 .slot-7,.slot-7-8 .slot-7,.slot-7-8 .slot-7-8,.slot-7-8-9 .slot-7,.slot-7-8-9 .slot-7-8,.slot-7-8-9 .slot-7-8-9,.slot-8 .slot-8,.slot-8-9 .slot-8,.slot-8-9 .slot-8-9 {
+		margin-left: 0 !important;
+	}
+	
+	/* Important is to avoid repeating this in larger screen css files */
+	/* Row Clearfix */
+	.row:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	.row {
+		zoom: 1;
+	}
+	
+	/* @end */
 }
 
 /* 992px */
 @media only screen and (min-width: 992px) {
-
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
-
+	/* @group SimpleGrid */
+	
+	body {
+		font-size: 100%;
+	}
+	
+	.grid {
+		width: 966px;
+	}
+	
+	/* Slots Setup */
+	.slot-0,.slot-1,.slot-2,.slot-3,.slot-4,.slot-5,.slot-0-1,.slot-0-1-2,.slot-0-1-2-3,.slot-0-1-2-3-4,.slot-0-1-2-3-4-5,.slot-1-2,.slot-1-2-3,.slot-1-2-3-4,.slot-1-2-3-4-5,.slot-2-3,.slot-2-3-4,.slot-2-3-4-5,.slot-3-4,.slot-3-4-5,.slot-4-5,.slot-6,.slot-7,.slot-8,.slot-9,.slot-6-7,.slot-6-7-8,.slot-6-7-8-9,.slot-7-8,.slot-7-8-9,.slot-8-9 {
+		display: inline;
+		float: left;
+		margin-left: 30px;
+	}
+	
+	/* 6-Col Grid Sizes */
+	.slot-0,.slot-1,.slot-2,.slot-3,.slot-4,.slot-5 {
+		width: 136px;
+	}
+	
+	/* Sixths */
+	.slot-0-1,.slot-1-2,.slot-2-3,.slot-3-4,.slot-4-5 {
+		width: 302px;
+	}
+	
+	/* Thirds */
+	.slot-0-1-2-3,.slot-1-2-3-4,.slot-2-3-4-5 {
+		width: 634px;
+	}
+	
+	/* Two-Thirds */
+	.slot-0-1-2-3-4,.slot-1-2-3-4-5 {
+		width: 800px;
+	}
+	
+	/* Five-Sixths */
+	/* 4-Col Grid Sizes */
+	.slot-6,.slot-7,.slot-8,.slot-9 {
+		width: 219px;
+	}
+	
+	/* Quarters */
+	.slot-6-7-8,.slot-7-8-9 {
+		width: 717px;
+	}
+	
+	/* Three-Quarters */
+	/* 6-Col/4-Col Shared Grid Sizes */
+	.slot-0-1-2,.slot-1-2-3,.slot-2-3-4,.slot-3-4-5,.slot-6-7,.slot-7-8,.slot-8-9 {
+		width: 468px;
+	}
+	
+	/* @end */
 }
 
-/* 1382px */
-@media only screen and (min-width: 1382px) {
-
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
-
+/* 1236px */
+@media only screen and (min-width: 1236px) {
+	/* @group SimpleGrid */
+	
+	body {
+		font-size: 1.125em;
+	}
+	
+	.grid {
+		width: 1206px;
+	}
+	
+	/* 6-Col Grid Sizes */
+	.slot-0,.slot-1,.slot-2,.slot-3,.slot-4,.slot-5 {
+		width: 176px;
+	}
+	
+	/* Sixths */
+	.slot-0-1,.slot-1-2,.slot-2-3,.slot-3-4,.slot-4-5 {
+		width: 382px;
+	}
+	
+	/* Thirds */
+	.slot-0-1-2-3,.slot-1-2-3-4,.slot-2-3-4-5 {
+		width: 794px;
+	}
+	
+	/* Two-Thirds */
+	.slot-0-1-2-3-4,.slot-1-2-3-4-5 {
+		width: 1000px;
+	}
+	
+	/* Five-Sixths */
+	/* 4-Col Grid Sizes */
+	.slot-6,.slot-7,.slot-8,.slot-9 {
+		width: 279px;
+	}
+	
+	/* Quarters */
+	.slot-6-7-8,.slot-7-8-9 {
+		width: 897px;
+	}
+	
+	/* Three-Quarters */
+	/* 6-Col/4-Col Shared Grid Sizes */
+	.slot-0-1-2,.slot-1-2-3,.slot-2-3-4,.slot-3-4-5,.slot-6-7,.slot-7-8,.slot-8-9 {
+		width: 588px;
+	}
+	
+	/* @end */
 }
 
 /* 2x */
@@ -701,22 +751,8 @@ content : ""; }
 only screen and (-o-min-device-pixel-ratio: 3/2), 
 only screen and (min-device-pixel-ratio: 1.5) {
 
-/* 1 ROOT 					============================================================================= */
-/* 2 HEADINGS 				============================================================================= */
-/* 3 TYPOGRAPHY 			============================================================================= */
-/* 4 LINKS 					============================================================================= */
-/* 5 FIGURES & IMAGES 		============================================================================= */
-/* 6 TABLES 				============================================================================= */
-/* 7 FORMS 					============================================================================= */
-/* 8 BANNER 				============================================================================= */
-/* 9 NAVIGATION				============================================================================= */
-/* 10 CONTENT 				============================================================================= */
-/* 11 MAIN 					============================================================================= */
-/* 12 COMPLEMENTARY 		============================================================================= */
-/* 13 CONTENTINFO 			============================================================================= */
-/* 14 GLOBAL OBJECTS 		============================================================================= */
-/* 15 VENDOR-SPECIFIC 		============================================================================= */
-/* 16 MODERNIZR 			============================================================================= */
-/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
 
 }
+
+/* @end */
