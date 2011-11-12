@@ -19,7 +19,6 @@ html {
 body {
 	margin: 0 auto;
 	padding: 0;
-	width: 90%;
 	font: 100%/1.4 'Helvetica Neue',Arial,sans-serif;
 	color: rgb(40,40,40);
 	background-color: transparent;
@@ -453,12 +452,7 @@ p {
 
 /* @end */
 
-
 /* @end */
-
-#logo {
-	
-}
 
 /* @group Media-queries */
 
