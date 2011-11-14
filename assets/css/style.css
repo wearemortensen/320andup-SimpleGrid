@@ -11,8 +11,6 @@ audio[controls],canvas,video {
 }
 
 html {
-	-ms-overflow-y: scroll;
-	overflow-y: scroll;
 	background: rgb(255,255,255);
 }
 
