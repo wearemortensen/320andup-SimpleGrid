@@ -1,11 +1,9 @@
 <!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if IEMobile 7]><html class="no-js iem7 oldie"><![endif]-->
-<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie7 oldie" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie8 oldie" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 
@@ -15,7 +13,7 @@
 
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width">
 
 		<link rel="stylesheet" href="assets/css/style.css">
 
@@ -23,7 +21,7 @@
 		<script src="assets/js/libs/selectivizr-min.js"></script>
 		<![endif]-->
 
-		<script src="assets/js/libs/modernizr-2.0.6.min.js"></script>
+		<script src="assets/js/libs/modernizr-2.5.0.min.js"></script>
 
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
@@ -38,12 +36,16 @@
 		<link rel="apple-touch-startup-image" href="assets/img/splash.png">
 
 		<meta http-equiv="cleartype" content="on">
+		
+		<!--[if lt IE 7]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<![endif]-->
 
 		<link rel="canonical" href="/">
 	</head>
 
 	<body>
+		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 		<header role="banner">
 			<h1 id="logo"></h1>
 		</header>
@@ -57,21 +59,14 @@
 		</footer>
 
 		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.7.min.js"><\/script>')</script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
 
 		<script src="assets/js/plugins.js"></script>
 		<script src="assets/js/script.js"></script>
-		<script src="assets/js/mylibs/helper.js"></script>
-
-		<!--[if (lt IE 9) & (!IEMobile)]>
-		<script src="assets/js/libs/imgsizer.js"></script>
-		<![endif]-->
 
 		<script>
-		// iOS scale bug fix
-		MBP.scaleFix();
-
 		// Respond.js
 		yepnope({
 			test : Modernizr.mq('(min-width)'),
@@ -80,15 +75,11 @@
 		</script>
 
 		<!-- http://mths.be/aab -->
-		<script>
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
-
-		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6. chromium.org/developers/how-tos/chrome-frame-getting-started -->
-		<!--[if lt IE 7 ]>
-		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-		<![endif]-->
+	    <script>
+	      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	      s.parentNode.insertBefore(g,s)}(document,'script'));
+	    </script>
 	</body>
 </html>
